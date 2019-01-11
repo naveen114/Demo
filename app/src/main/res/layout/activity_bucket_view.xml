@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorGallearyBG"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/bucketSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        fontPath="fonts/lato_regular.ttf"
+        tools:ignore="MissingPrefix"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/colorSearchBoxText"
+        android:drawableLeft="@drawable/ic_action_search_dark"
+        android:textCursorDrawable="@null"
+        android:hint="Search"
+        app:backgroundTint="@android:color/transparent"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp">
+        <TextView
+            android:id="@+id/myBucketText"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="My Bucket"
+            fontPath="fonts/lato_regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/bucketSearch"
+            app:layout_constraintTop_toBottomOf="@+id/bucketSearch" />
+
+        <TextView
+            android:id="@+id/openPartners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Partners"
+            android:textSize="16dp"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:onClick="navClick"
+            fontPath="fonts/lato_regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textColor="#00b26e"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="right"
+            app:layout_constraintEnd_toEndOf="@+id/bucketSearch"
+            app:layout_constraintTop_toBottomOf="@+id/bucketSearch"
+            />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGallearyBG">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fcontainer"
+            android:orientation="vertical"
+            android:layout_above="@+id/linFooter">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/linFooter"
+            android:orientation="vertical">
+            <include
+                layout="@layout/bottom_nav_bar_new"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+<!--
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:paddingTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/bucketSearch"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/colorSearchBoxText"
+        android:drawableLeft="@drawable/ic_action_search_dark"
+        android:textCursorDrawable="@null"
+        android:hint="Search"
+        app:backgroundTint="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/myBucketText"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="My Bucket"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/bucketSearch"
+        app:layout_constraintTop_toBottomOf="@+id/bucketSearch" />
+
+    <TextView
+        android:id="@+id/openPartners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Partners"
+        android:textSize="16dp"
+        android:autoLink="web"
+        android:textStyle="bold"
+        android:onClick="navClick"
+        android:textColor="#00b26e"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/bucketSearch"
+        app:layout_constraintTop_toBottomOf="@+id/bucketSearch"
+        />
+
+    &lt;!&ndash;&ndash;&gt;
+
+    <LinearLayout
+        android:id="@+id/emptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/myBucketText"
+        app:layout_constraintTop_toBottomOf="@+id/myBucketText"
+        >
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/empty_bucket_arrow"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/arrowIcon"
+            app:srcCompat="@drawable/empty_bucket_text"
+            />
+
+        &lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;
+        &lt;!&ndash;android:id="@+id/photoRecycler"&ndash;&gt;
+        &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;
+        &lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;
+
+        &lt;!&ndash;</android.support.v7.widget.RecyclerView>&ndash;&gt;
+    </LinearLayout>
+
+    <include layout="@layout/bottom_nav_bar"/>
+
+</android.support.constraint.ConstraintLayout>-->

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:paddingTop="8dp"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorGallearyBG"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/myBucketText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Bucket"
+            fontPath="fonts/lato_bold.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="@dimen/sp22"
+            android:textColor="@color/blackish"
+            app:layout_constraintStart_toStartOf="@+id/bucketSearch"
+            app:layout_constraintTop_toBottomOf="@+id/bucketSearch" />
+
+        <TextView
+            android:id="@+id/openPartners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community"
+            android:textSize="16dp"
+            android:layout_gravity="right"
+            android:autoLink="web"
+            fontPath="fonts/lato_bold.ttf"
+            tools:ignore="MissingPrefix"
+            android:textStyle="bold"
+            android:onClick="navClick"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/bucketSearch"
+            app:layout_constraintTop_toBottomOf="@+id/bucketSearch"
+            />
+
+    </FrameLayout>
+
+    <!--android:drawableLeft="@drawable/ic_action_search_dark"-->
+
+    <android.support.v7.widget.AppCompatEditText
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/bucketSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/colorSearchBoxText"
+        android:textCursorDrawable="@drawable/blackcursor"
+        android:hint="Search by note"
+        android:background="@android:color/transparent"
+        fontPath="fonts/lato_regular.ttf"
+        tools:ignore="MissingPrefix"
+        android:textColorHint="@color/hintcolor"
+        app:backgroundTint="@android:color/transparent" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/emptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/myBucketText"
+        app:layout_constraintTop_toBottomOf="@+id/myBucketText">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/empty_bucket_arrow"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/arrowIcon"
+            android:visibility="gone"
+            app:srcCompat="@drawable/emptytextnew"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/sp22"
+            fontPath="fonts/lato_regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textColor="#b9b9b9"
+            android:text="Looks like\nyour bucket is empty !\nCheck our Community to find\nGreat new destinations!"/>
+
+    </LinearLayout>
+
+
+    <!--empty_bucket_text-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:id="@+id/rvMyBucket">
+
+    </android.support.v7.widget.RecyclerView>
+
+   <!-- <include layout="@layout/bottom_nav_bar"/>-->
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:weightSum="1.2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/greyBucket"
+                android:onClick="navClick"
+                android:src="@drawable/bucketnew"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/blackish"
+                fontPath="fonts/lato_semibold.ttf"
+                tools:ignore="MissingPrefix"
+                android:id="@+id/tvBucket"
+                android:textAllCaps="true"
+                android:text="bucket"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:id="@+id/openCameraButton"
+                android:onClick="navClick"
+                android:src="@drawable/cameraround"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/cameraRoll"
+                android:onClick="navClick"
+                android:src="@drawable/rollnew"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/blackish"
+                fontPath="fonts/lato_semibold.ttf"
+                tools:ignore="MissingPrefix"
+                android:textAllCaps="true"
+                android:id="@+id/tvRoll"
+                android:text="Roll"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

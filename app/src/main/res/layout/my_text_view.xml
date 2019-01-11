@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_height="94dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="#cccccc"-->
+    <!--&gt;-->
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/app_bg2"-->
+        <!--android:layout_marginRight="24dp"-->
+        <!--android:layout_gravity="start"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Something Here"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--/>-->
+<!--</LinearLayout>-->
+<TextView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    fontPath="fonts/lato_regular.ttf"
+    tools:ignore="MissingPrefix">
+
+</TextView>

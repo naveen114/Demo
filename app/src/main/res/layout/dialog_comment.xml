@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="280dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@null">
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="288dp"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            >
+            <TextView
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit note"
+                android:textSize="20dp"
+                fontPath="fonts/lato_regular.ttf"
+                tools:ignore="MissingPrefix"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:padding="16dp"/>
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#f7f7f7"
+                android:hint="Add a note"
+                fontPath="fonts/lato_regular.ttf"
+                tools:ignore="MissingPrefix"
+                android:textCursorDrawable="@null"
+                android:lines="3"
+                android:maxLength="2000"
+                android:maxLines="3"
+                android:padding="16dp" />
+            <TextView
+                android:id="@+id/cancelComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Cancel"
+                fontPath="fonts/lato_regular.ttf"
+                tools:ignore="MissingPrefix"
+                android:layout_gravity="center"
+                android:paddingVertical="16dp"
+                android:autoLink="web"
+                android:textAllCaps="false"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/saveComment"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Save note"
+                fontPath="fonts/lato_regular.ttf"
+                tools:ignore="MissingPrefix"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:theme="@style/SaveButton" />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fontPath="fonts/lato_regular.ttf"
+        tools:ignore="MissingPrefix"
+        android:gravity="center_horizontal"
+        android:text="@string/dlg_string"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="256dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"
+            android:id="@+id/delete"
+            android:theme="@style/NoButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="120dp"
+            fontPath="fonts/lato_regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"
+            android:id="@+id/cancel"
+            fontPath="fonts/lato_regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Keep"
+            android:background="@android:color/transparent"
+            android:textStyle="bold" />
+
+
+        <!--android:theme="@style/KeepButton"-->
+        <!--style="@style/Widget.AppCompat.Button.Colored"-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

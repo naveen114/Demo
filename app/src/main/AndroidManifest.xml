@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.crew.motley.dere">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.camera2" -->
+    <!-- android:required="true" /> -->
+    <application
+        android:name=".Appp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- <meta-data -->
+        <!-- android:name="io.branch.sdk.BranchKey" -->
+        <!-- android:value="key_live_anFZo3kOQYPwAKihOj7s0hmowumzMvFR" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="io.branch.sdk.BranchKey.test" -->
+        <!-- android:value="key_test_iau2l5iUSXPuFVoeQa7WDnnlEEgrJtyZ" /> -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_aktZh2vhcPbHmxQQUtB3SolhvrbiTFiD" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_efE4f1DglMkVbAKQLuRC1ngeqDgbHtnT" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" /> <!-- Set to true to use Branch_Test_Key -->
+
+        <activity android:name=".photo.activity.Photo2Activity" />
+        <activity
+            android:name=".photo.activity.NewPhotoActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".photo.activity.SharedPhotoActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+
+            <!-- Branch URI Scheme -->
+            <intent-filter>
+                <data android:scheme="getdere" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links (optional) -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="getdere.co" />
+
+                <data
+                    android:scheme="https"
+                    android:host="getdere-alternate.app.link" />
+
+                <data android:scheme="https"
+                    android:host="getdere.co" />
+
+                <data android:scheme="app"
+                    android:host="getdere.co" />
+
+
+            </intent-filter>
+
+
+            <!-- <data -->
+            <!-- android:host="gog6.test-app.link" -->
+            <!-- android:scheme="https" /> -->
+            <!-- <data -->
+            <!-- android:host="gog6-alternate.test-app.link" -->
+            <!-- android:scheme="https" /> -->
+
+        </activity>
+        <activity
+            android:name=".photo.activity.PhotoLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gallery.activity.GalleryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!--<receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name=".photo.activity.BucketView"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".photo.activity.OurPartnersActivity"
+            android:label="@string/title_activity_our_partners"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".photo.activity.MyBucketFullViewActivity" />
+        <activity
+            android:name=".photo.activity.CameraGalleryActivity"
+            android:configChanges="orientation|screenSize"></activity>
+
+    </application>
+
+</manifest>
