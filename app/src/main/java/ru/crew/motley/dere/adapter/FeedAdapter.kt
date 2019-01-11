@@ -15,6 +15,7 @@ import ru.crew.motley.dere.photo.activity.BucketView
 class FeedAdapter(val context : Context, val feed : ArrayList<FeedItem>) : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
 
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.feed_layout, parent ,false)
         return ViewHolder(view)
